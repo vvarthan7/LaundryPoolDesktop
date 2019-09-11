@@ -1,0 +1,126 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+@font-face {
+	font-family: 'muliBlack';
+	src: url('font/Muli-Black.ttf');
+}
+@font-face {
+	font-family: 'muliRegular';
+	src: url('font/Muli-Regular.ttf');
+}
+@font-face {
+	font-family: 'muliBold';
+	src: url('font/Muli-Bold.ttf');
+}
+.App {
+	background-image: url('images/background.jpg');
+	background-size: cover;
+	width: 100%;
+}
+header img {
+	width: 300px;
+	position: relative;
+	left: 15%;
+	margin: 35px 0px 30px 0;
+}
+.main-row {
+	text-align: center;
+	padding: 20px 0 0 0;
+}
+.banner-image {
+	width: 55%;
+}
+.first-col h2 {
+	margin: 0;
+	font-family: muliBlack;
+	color: black;
+	letter-spacing: 1px;
+}
+.first-col p {
+	padding-top: 5px;
+	letter-spacing: 1px;
+	font-family: muliRegular;
+	font-size: 17px;
+}
+.form-title {
+	color: #022a4d;
+	padding-bottom: 20px;
+	margin: 0;
+	font-family: muliBold;
+	letter-spacing: 1px;
+}
+.form-input-style {
+	position: relative;
+}
+.form-input-style input {
+	width: 60%;
+	padding: 10px 5px 10px 40px;
+	margin: 22px;
+	border: 1px solid #1f81a5;
+	border-radius: 8px 
+}
+.form-input-style input:focus {
+	border: 1px solid #1f81a5;
+	border-radius: 8px;
+	outline: 0 
+}
+.form-input-style label {
+	position: absolute;
+	background: #1f81a5;
+	color: white;
+	padding: 2px 18px;
+	font-size: 10px;
+	letter-spacing: .5px;
+	left: 23%;
+	top: 10px;
+	font-family: muliRegular;
+}
+.submit-btn {
+	color: white;
+	padding: 8px 35px;
+	border-radius: 6px;
+	border: 0;
+	background: #1f81a5;
+	position: relative;
+	left: -19%;
+	top: 10px;
+	font-family: muliRegular;
+}
+.input-image.user {
+	position: absolute;
+	left: 23%;
+	width: 18px;
+	top: 33px;
+}
+.input-image.envelope {
+	position: absolute;
+	left: 23%;
+	top: 36px;
+	width: 20px;
+}
+.input-image.smartphone {
+	position: absolute;
+	left: 23%;
+	top: 34px;
+	width: 12px;
+}
+.valid-feedback{
+	color: green;
+	font-family: muliBold;
+}
+.invalid-feedback{
+	color: red;
+	margin: auto;
+	padding: 3px;
+	font-family: muliBold;
+}
+@media only screen and (min-width: 320px) and (max-width: 667px){
+	h2{
+		font-size: 16px;
+   }
+	.first-col p{
+		font-size: 12px;
+   }
+}
