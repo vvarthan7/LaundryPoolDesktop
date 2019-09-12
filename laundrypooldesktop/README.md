@@ -1,1 +1,0 @@
-Laundry Pool Desktop files
