@@ -37,25 +37,32 @@ class Home extends Component {
 		email: '',
 		phone: '',
 		errors: '',
-		success: ''
+		success: '',
+		formSubmitted: false
 	};
 	onSubmit = (e) => {
 		e.preventDefault();
+		this.setState({
+			formSubmitted: true
+		});
 		const nameRegex = /^[a-zA-Z]{2,10}$/;
 		const emailRegex = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
 		const phoneRegex = /^\(?\d{3}\)?[-. ]?\d{3}[-. ]?\d{4}$/;
 
 		if (!nameRegex.test(this.state.name) || this.state.userName === '') {
 			this.setState({
-				error: 'Name must be between 2 and 10 characters'
+				error: 'Name must be between 2 and 10 characters',
+				formSubmitted: false
 			});
 		} else if (!emailRegex.test(this.state.email) || this.state.email === '') {
 			this.setState({
-				error: 'Enter a valid email'
+				error: 'Enter a valid email',
+				formSubmitted: false
 			});
 		} else if (!phoneRegex.test(this.state.phone) || this.state.phone === '') {
 			this.setState({
-				error: 'Enter a valid phone'
+				error: 'Enter a valid phone',
+				formSubmitted: false
 			});
 		} else {
 			axios
@@ -70,7 +77,8 @@ class Home extends Component {
 						error: '',
 						userName: '',
 						email: '',
-						phone: ''
+						phone: '',
+						formSubmitted: false
 					});
 				});
 		}
@@ -84,6 +92,7 @@ class Home extends Component {
 
 	render() {
 		const { error, success } = this.state;
+		const isFormSubmitted = this.state.formSubmitted;
 		return (
 			<div className="container">
 				<div className="row main-row">
@@ -125,10 +134,16 @@ class Home extends Component {
 								{/* {success && <div className="valid-feedback"> {success} </div>}{' '} */}{' '}
 							</div>{' '}
 							{' '}
-							<button type="submit" className="submit-btn">
-								{' '}
-								Submit {' '}
-							</button>{' '}
+							{!isFormSubmitted ? (
+								<button type="submit" className="submit-btn">
+									{' '}
+									Submit {' '}
+								</button>
+							) : (
+								<button className="submit-btn" disabled>
+									<i className="fa fa-spinner fa-spin" />
+								</button>
+							)}{' '}
 							{' '}
 						</form>{' '}
 						{' '}
