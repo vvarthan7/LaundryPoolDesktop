@@ -73,8 +73,7 @@ header img {
 	border: 1px solid #1f81a5;
 	border-radius: 8px
 }
-
-.form-input-style input:focus {
+.form-input-style input:focus , .submit-btn:focus{
 	border: 1px solid #1f81a5;
 	border-radius: 8px;
 	outline: 0
@@ -168,14 +167,14 @@ header img {
 	}
 
 	header img {
-		width: 250px;
-		position: static;
-		margin: 20px 0px 20px 0;
+		width: 225px;
+		position: static;		
+		margin: 10px 0px 10px 0;
 	}
 
 	.first-col h2 {
 		font-size: 20px;
-		padding-top: 20px;
+		padding-top: 15px;
 	}
 
 	.first-col p {
@@ -184,19 +183,40 @@ header img {
 
 	.form-title {
 		font-size: 20px;
-	}
-
+	}	
 	.banner-image {
 		width: 50%;
 	}
-
-	.form-title {
-		margin-top: 25px;
+	.form-title{
+		margin-top: 20px;
+		padding-bottom: 10px;
+	}
+	.form-input-style input {
+		width: 75%;
+		padding: 10px 5px 10px 40px;
+		margin: 15px;		
+	}
+	.form-input-style label{
+		left: 17%;
+		top: 5px;
+	}
+	.input-image.user {		
+		left: 17%;		
+		top: 29px;
+	}
+	.input-image.envelope {		
+		left: 17%;
+		top: 30px;
+	}
+	.input-image.smartphone {
+		left: 17%;
+		top: 28px;
 	}
 
 	.submit-btn {
 		left: 0;
 		top: 0;
+		margin-bottom: 15px;
 	}
 
 	.last-col {
